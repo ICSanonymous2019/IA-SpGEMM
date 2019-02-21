@@ -1,19 +1,22 @@
 # IA-SPGEMM
 
-IA-SPGEMM is a An Input Auto-tuning Sparse General Matrix-Matrix Multiplication on Multicore and Manycore Architure. Currently
-supported co include:
+IA-SPGEMM is a An Input Auto-tuning Sparse General Matrix-Matrix Multiplication on Multicore and Manycore Architure. 
 
+It is composed of several parts:
 - SpGEMM algorithms for COO, DIA and ELL sparse storage format
 - Feature extraction and density representation
 - MatNet (mix CNN and BP)
 
-All tests default calculate the square of A for matrix inputs. 
+All training data comes from SuitSparse Matrix Collection.
 
-The tool extracts all of the features and density representation as MatNet inputs.
+The tool extracts all of the features and density representation as inputs of MatNet.
 
 It is easy to use and provide unified interface.
 
 ## Getting Started
+
+All the code will soon be open source !!!
+
 In IA-SPGEMM system, the goal is to search an optimal format and algorithm that minimizes computing overhead.
 
 Setting up an IA-SPGEMM is easy.
@@ -22,14 +25,14 @@ Setting up an IA-SPGEMM is easy.
 ```bash
 cd ./IA-SPGEMM-CPU_release;
 make;
-./spgemm-cpu Inputs/dia.mtx;
+./spgemm-cpu Inputs/matrix_A.mtx Inputs/matrix_B.mtx;
 ```
 
 (2) run SpGEMM code on GPU with auto-tuning in double precision  
 ```bash
 cd ./IA-SPGEMM-GPU_release;
 make;
-./spgemm-gpu Inputs/dia.mtx;
+./spgemm-gpu Inputs/matrix_A.mtx Inputs/matrix_B.mtx;
 ```
 
 **Intel & AMD CPU example**
@@ -56,5 +59,3 @@ Weights are in IA-SPGEMM-CPU_release/NetWeights and IA-SPGEMM-GPU_release/NetWei
 MatNet structure is below:
 
 <img src="https://github.com/AnonymousPPOPP2019/IA-SPGEMM/blob/master/model.png"/>
-
-
