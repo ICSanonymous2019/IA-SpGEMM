@@ -2,6 +2,10 @@
 
 IA-SPGEMM is a An Input Auto-tuning Sparse General Matrix-Matrix Multiplication on Multicore and Manycore Architure. 
 
+All the code will be open source soon !!!
+All the code will be open source soon !!!
+All the code will be open source soon !!!
+
 It is composed of several parts:
 - SpGEMM algorithms for COO, DIA and ELL sparse storage format
 - Feature extraction and density representation
@@ -14,8 +18,6 @@ The tool extracts all of the features and density representation as inputs of Ma
 It is easy to use and provide unified interface.
 
 ## Getting Started
-
-All the code will soon be open source !!!
 
 In IA-SPGEMM system, the goal is to search an optimal format and algorithm that minimizes computing overhead.
 
